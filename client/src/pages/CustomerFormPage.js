@@ -30,8 +30,27 @@ export default function CustomerFormPage() {
   }
 
   return (
-    <div>
-      <h2>{id ? 'Edit' : 'Create'} Customer</h2>
+    <div
+      style={{
+        maxWidth: '600px',
+        margin: '40px auto',
+        padding: '20px',
+        borderRadius: '8px',
+        backgroundColor: '#f8f9fa',
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+        fontFamily: 'Arial, sans-serif',
+      }}
+    >
+      <h2
+        style={{
+          marginBottom: '20px',
+          color: '#333',
+          textAlign: 'center',
+        }}
+      >
+        {id ? 'Edit' : 'Create'} Customer
+      </h2>
+
       <CustomerForm initial={initial} onSubmit={handleSubmit} />
     </div>
   );

@@ -29,12 +29,84 @@ export default function CustomerForm({ initial, onSubmit }) {
   }
 
   return (
-    <form onSubmit={submit}>
-      <div><label>First name</label><br /><input value={first_name} onChange={e => setFirstName(e.target.value)} /></div>
-      <div><label>Last name</label><br /><input value={last_name} onChange={e => setLastName(e.target.value)} /></div>
-      <div><label>Phone</label><br /><input value={phone_number} onChange={e => setPhoneNumber(e.target.value)} /></div>
-      <div style={{ marginTop: 10 }}>
-        <button type="submit">Save</button>
+    <form
+      onSubmit={submit}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '15px',
+        maxWidth: '400px',
+        margin: '0 auto',
+        textAlign: 'left',
+      }}
+    >
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <label style={{ marginBottom: '5px', fontWeight: '500', color: '#333' }}>
+          First Name
+        </label>
+        <input
+          value={first_name}
+          onChange={e => setFirstName(e.target.value)}
+          placeholder="Enter first name"
+          style={{
+            padding: '8px 10px',
+            border: '1px solid #ccc',
+            borderRadius: '6px',
+            fontSize: '14px',
+          }}
+        />
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <label style={{ marginBottom: '5px', fontWeight: '500', color: '#333' }}>
+          Last Name
+        </label>
+        <input
+          value={last_name}
+          onChange={e => setLastName(e.target.value)}
+          placeholder="Enter last name"
+          style={{
+            padding: '8px 10px',
+            border: '1px solid #ccc',
+            borderRadius: '6px',
+            fontSize: '14px',
+          }}
+        />
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <label style={{ marginBottom: '5px', fontWeight: '500', color: '#333' }}>
+          Phone
+        </label>
+        <input
+          value={phone_number}
+          onChange={e => setPhoneNumber(e.target.value)}
+          placeholder="Enter phone number"
+          style={{
+            padding: '8px 10px',
+            border: '1px solid #ccc',
+            borderRadius: '6px',
+            fontSize: '14px',
+          }}
+        />
+      </div>
+
+      <div style={{ marginTop: '10px', textAlign: 'center' }}>
+        <button
+          type="submit"
+          style={{
+            padding: '10px 18px',
+            border: 'none',
+            borderRadius: '6px',
+            backgroundColor: '#007bff',
+            color: '#fff',
+            cursor: 'pointer',
+            fontSize: '15px',
+            fontWeight: '500',
+          }}
+        >
+          Save
+        </button>
       </div>
     </form>
   );

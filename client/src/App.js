@@ -6,8 +6,8 @@ import CustomerDetailPage from './pages/CustomerDetailPage';
 function App() {
   return (
     <div style={{ padding: 20 }}>
-      <nav style={{ marginBottom: 20 }}>
-        <Link to="/">Customers</Link> | <Link to="/create">Create</Link>
+      <nav style={{ marginBottom: 20, textAlign: "end" }}>
+        <Link to="/" style={{textDecoration: "none", color: "blue", fontSize: "25px", fontWeight: "bold"}}>Customers</Link> | <Link to="/create" style={{textDecoration: "none", color: "blue", fontSize: "25px", fontWeight: "bold"}}>Create</Link>
       </nav>
       <Routes>
         <Route path="/" element={<CustomerListPage />} />
