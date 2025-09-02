@@ -107,7 +107,7 @@ export default function CustomerListPage() {
         </button>
       </div>
 
-      {data.length === 0 ? <div style={{textAlign: "center", marginTop: "10px"}}>No customers found.</div> : <><table
+      {data.length === 0 ? <div style={{textAlign: "center", marginTop: "10px"}}>No customers found.</div> : <table
         style={{
           width: '100%',
           borderCollapse: 'collapse',
@@ -171,6 +171,7 @@ export default function CustomerListPage() {
           ))}
         </tbody>
       </table>
+      }
 
       <div
         style={{
@@ -223,8 +224,6 @@ export default function CustomerListPage() {
           Next
         </button>
       </div>
-      </>
-    }
     </div>
   );
 }

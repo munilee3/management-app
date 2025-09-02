@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { run, all, get, db } = require('./db');
+const { run, all, get, db } = require('./init_db');
 
 const app = express();
 app.use(cors({
