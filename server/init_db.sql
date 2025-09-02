@@ -1,4 +1,3 @@
--- Run once to create the database schema (or let the server create if not present)
 CREATE TABLE IF NOT EXISTS customers (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   first_name TEXT NOT NULL,

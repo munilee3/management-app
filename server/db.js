@@ -11,7 +11,6 @@ const db = new sqlite3.Database(DB_PATH, (err) => {
   console.log('Connected to SQLite database:', DB_PATH);
 });
 
-// Helper wrappers returning Promises
 function run(sql, params = []) {
   return new Promise((resolve, reject) => {
     db.run(sql, params, function (err) {

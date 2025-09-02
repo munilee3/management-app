@@ -5,7 +5,6 @@ const DB_PATH = path.join(__dirname, 'database.db');
 const db = new sqlite3.Database(DB_PATH);
 
 db.serialize(() => {
-  // Create customers table
   db.run(`
     CREATE TABLE IF NOT EXISTS customers (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -15,7 +14,6 @@ db.serialize(() => {
     )
   `);
 
-  // Create addresses table
   db.run(`
     CREATE TABLE IF NOT EXISTS addresses (
       id INTEGER PRIMARY KEY AUTOINCREMENT,

@@ -1,4 +1,3 @@
-// server/migrate_addresses.js
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
@@ -34,7 +33,6 @@ function columnExists(table, col) {
         });
       } else console.log("Column pin_code already exists");
 
-      // If you have older columns like `street` / `zip`, copy them into the new columns:
       db.run("UPDATE addresses SET address_details = street WHERE (address_details IS NULL OR address_details = '') AND (street IS NOT NULL);", (err) => {
         if (err) console.error("Error copying street->address_details:", err.message);
         else console.log("Copied street -> address_details (if present)");
@@ -46,7 +44,6 @@ function columnExists(table, col) {
       });
     });
 
-    // give the DB a moment to finish then close
     setTimeout(() => {
       db.close();
       console.log("Migration finished, DB closed");
