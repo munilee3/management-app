@@ -1,4 +1,4 @@
-const API_BASE = 'https://management-app-ikbg.onrender.com/';
+const API_BASE = 'https://management-app-ikbg.onrender.com';
 
 async function request(path, options = {}) {
   const res = await fetch(`${API_BASE}${path}`, {
