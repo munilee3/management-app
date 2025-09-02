@@ -4,7 +4,7 @@ const { run, all, get, db } = require('./init_db');
 
 const app = express();
 app.use(cors({
-    origin: 'https://management-app-1-fr9o.onrender.com',
+    origin: 'https://management-app-static.onrender.com/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 app.use(express.json());
